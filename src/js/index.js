@@ -1,4 +1,4 @@
-import '../css/';
+import '../css';
 import ApiService from './apiService';
 import { Notify } from 'notiflix';
 import SimpleLightbox from 'simplelightbox';
