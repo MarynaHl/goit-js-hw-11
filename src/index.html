@@ -1,21 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style></style>
+    <title>CRUD</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <form class="search-form" id="search-form">
-      <input type="text" name="searchQuery" autocomplete="off" placeholder="Search images..." />
-      <button class="search-btn" type="submit"><img src="./img/search-icon.png" /></button>
-    </form>
-    <div class="gallery">
-      <!-- Картки зображень -->
-    </div>
-    <button type="button" class="load-more">Load more</button>
-    <script src="./js/index.js"></script>
+    <header class="header">
+      <form class="search-form" id="search-form">
+        <input type="text" name="searchQuery" autocomplete="off" placeholder="Search images..." />
+        <button type="submit">Search</button>
+      </form>
+    </header>
+    <section id="section" class="section">
+      <div class="gallery"></div>
+      <div class="gallery__end visually-hidden">
+        "We're sorry, but you've reached the end of search results."
+      </div>
+      <div id="preloader" class="visually-hidden">
+        <div class="preloader__first"></div>
+        <div class="preloader__second"></div>
+        <div class="preloader__third"></div>
+      </div>
+    </section>
+    <script src="./index.js"></script>
   </body>
 </html>
